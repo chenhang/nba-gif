@@ -106,8 +106,8 @@ def get_videos(game_date='20171029', game='SASIND'):
             video_url = next(v['#text'] for v in video_xml['video']
                              ['files']['file'] if VIDEO_QUALITIES[2] in v['#text'])
             clip = (VideoFileClip(video_url)
-                    .resize(0.5))
-            clip.write_gif("test.gif")
+                    .resize(0.7))
+            clip.write_gif("test.gif", fps=15, program='ffmpeg')
             print video_url
             break
             time.sleep(2)
