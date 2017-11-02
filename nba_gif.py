@@ -14,10 +14,11 @@ VIDEO_QUALITIES = ['416x240_200.mp4', '640x360_600.mp4',
                    '1280x720_3500.mp4']
 GAME_CONFIGS = ['PlayByPlayV2']
 HEADERS = {
-    'user-agent':
-    ('Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+    'User-Agent':
+    ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36'
      ),
     'Dnt': ('1'),
+    'Host': ('stats.nba.com'),
     'Accept-Encoding': ('gzip, deflate, sdch'),
     'Accept-Language': ('en'),
     'origin': ('http://stats.nba.com')
@@ -96,21 +97,37 @@ def get_videos(game_date='20171029', game='SASIND'):
             event[headers[i]] = value
         if event['HOMEDESCRIPTION'] or event['VISITORDESCRIPTION']:
             video_data_url = 'http://stats.nba.com/stats/videoevents'
-            video_info = get(url=video_data_url, headers=HEADERS, params={
-                             'GameEventID': event['EVENTNUM'], 'GameID': event['GAME_ID']}).json()['resultSets']
+
+            res = get(url=video_data_url, timeout=100, headers=HEADERS, params={
+                'GameEventID': event['EVENTNUM'], 'GameID': event['GAME_ID']})
+            print res, res.url
+            video_info = res.json()['resultSets']
             uuid = video_info['Meta']['videoUrls'][0]['uuid']
+            name = video_info['playlist'][0]['dsc']
+            game_path = os.path.join('downloads',
+                                     game_date, '-'.join([game, event['GAME_ID']]))
+            gif_path = os.path.join(game_path, 'gif')
+            video_path = os.path.join(game_path, 'video')
+            if not os.path.exists(game_path):
+                os.makedirs(game_path)
+            if not os.path.exists(gif_path):
+                os.makedirs(gif_path)
+            if not os.path.exists(video_path):
+                os.makedirs(video_path)
+
             date_str = '/'.join(video_info['playlist']
                                 [0]['gc'].split('/')[0].split('-'))
             video_xml = xmltodict.parse(get(
                 url='http://www.nba.com/video/wsc/league/' + uuid + '.xml').content)
             video_url = next(v['#text'] for v in video_xml['video']
-                             ['files']['file'] if VIDEO_QUALITIES[2] in v['#text'])
-            clip = (VideoFileClip(video_url)
-                    .resize(0.7))
-            clip.write_gif("test.gif", fps=15, program='ffmpeg')
+                             ['files']['file'] if VIDEO_QUALITIES[1] in v['#text'])
+            clip = VideoFileClip(video_url).resize(0.7)
+            # clip.write_videofile(os.path.join(video_path, '.'.join(
+            #     [str(event['EVENTNUM']), name, 'mp4'])))
+            clip.write_gif(os.path.join(gif_path, '.'.join(
+                [str(event['EVENTNUM']), name, 'gif'])), fps=15, program='ffmpeg')
             print video_url
-            break
-            time.sleep(2)
+            time.sleep(4)
 
 
 # get_scoreboard()
