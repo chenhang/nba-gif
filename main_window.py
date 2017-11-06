@@ -15,7 +15,6 @@ from moviepy.editor import *
 import xmltodict
 import time
 import sys
-from xml.etree import ElementTree
 from PyQt4 import QtCore, QtGui
 from PyQt4.QtCore import QAbstractTableModel, Qt, QVariant
 
@@ -176,7 +175,7 @@ def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIE
             print video_url
             progress = str(current) + '/' + str(total)
             print str(current) + '/' + str(total)
-            time.sleep(2)
+            # time.sleep(2)
             if dialog:
                 dialog.setText(str(current) + '/' + str(total))
                 # dialog.setValue(current)
