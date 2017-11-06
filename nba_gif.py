@@ -84,14 +84,15 @@ def get_games(year=2017, month=10, day=29):
                 print e
 
 
-def get_videos(game_date='20171029', game='SASIND'):
+def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIES[0]):
     year = str(game_date)[0:4]
     data_path = os.path.join(
         'games', year, '-'.join([game_date, game]) + '.json')
     data = load_json(data_path)
     pbps = data['resultSets'][0]
     headers = data['resultSets'][0]['headers']
-    for row in pbps['rowSet']:
+    total = len(pbps['rowSet'])
+    for current, row in enumerate(pbps['rowSet']):
         event = {}
         for i, value in enumerate(row):
             event[headers[i]] = value
@@ -120,12 +121,13 @@ def get_videos(game_date='20171029', game='SASIND'):
             video_xml = xmltodict.parse(get(
                 url='http://www.nba.com/video/wsc/league/' + uuid + '.xml').content)
             video_url = next(v['#text'] for v in video_xml['video']
-                             ['files']['file'] if VIDEO_QUALITIES[1] in v['#text'])
-            clip = VideoFileClip(video_url).resize(0.7)
+                             ['files']['file'] if video_quality in v['#text'])
+            clip = VideoFileClip(video_url, audio=False,
+                                 resize_algorithm='lanczos').resize(0.7)
             # clip.write_videofile(os.path.join(video_path, '.'.join(
             #     [str(event['EVENTNUM']), name, 'mp4'])))
             clip.write_gif(os.path.join(gif_path, '.'.join(
-                [str(event['EVENTNUM']), name, 'gif'])), fps=15, program='ffmpeg')
+                [str(event['EVENTNUM']), name, 'gif'])), program='ffmpeg')
             print video_url
             time.sleep(4)
 
