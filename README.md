@@ -7,6 +7,8 @@
 
 ## Installation
 
+`git clone git@github.com:chenhang/nba-gif.git`
+`cd nba-gif`
 `pip install -r requirments.txt`
 
 ## Usage
