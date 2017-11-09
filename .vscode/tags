@@ -82,7 +82,6 @@ DrillResults	../nba_py/draftcombine.py	/^class DrillResults:$/;"	kind:class	line
 EFF	../nba_py/constants.py	/^    EFF = 'EFF'$/;"	kind:variable	line:609
 EFG_PCT	../nba_py/constants.py	/^    EFG_PCT = 'EFG_PCT'$/;"	kind:variable	line:626
 East	../nba_py/constants.py	/^    East = 'East'$/;"	kind:variable	line:457
-ElementTree	../main_window.py	/^from xml.etree import ElementTree$/;"	kind:namespace	line:18
 ElementTree	../nba_gif.py	/^from xml.etree import ElementTree$/;"	kind:namespace	line:11
 EndPeriod	../nba_py/constants.py	/^class EndPeriod(Period):$/;"	kind:class	line:587
 EndRange	../nba_py/constants.py	/^class EndRange(_DefaultZero):$/;"	kind:class	line:579
@@ -122,7 +121,7 @@ FirstRound	../nba_py/constants.py	/^    FirstRound = '1st+Round'$/;"	kind:variab
 Forward	../nba_py/constants.py	/^    Forward = 'F'$/;"	kind:variable	line:699
 FourFactors	../nba_py/constants.py	/^    FourFactors = 'Four Factors'$/;"	kind:variable	line:416
 FourthQuarter	../nba_py/constants.py	/^    FourthQuarter = '4'$/;"	kind:variable	line:537
-GAME_CONFIGS	../main_window.py	/^GAME_CONFIGS = ['PlayByPlayV2']$/;"	kind:variable	line:40
+GAME_CONFIGS	../main_window.py	/^GAME_CONFIGS = ['PlayByPlayV2']$/;"	kind:variable	line:39
 GAME_CONFIGS	../nba_gif.py	/^GAME_CONFIGS = ['PlayByPlayV2']$/;"	kind:variable	line:15
 GameID	../nba_py/constants.py	/^class GameID(_DefaultBlank):$/;"	kind:class	line:684
 GameLog	../nba_py/league.py	/^class GameLog:$/;"	kind:class	line:377
@@ -142,6 +141,7 @@ HEADERS	../nba_py/__init__.py	/^HEADERS = {$/;"	kind:variable	line:26
 Height	../nba_py/constants.py	/^class Height(_DefaultBlank):$/;"	kind:class	line:736
 Home	../nba_py/constants.py	/^    Home = 'Home'$/;"	kind:variable	line:437
 HustleStats	../nba_py/game.py	/^class HustleStats:$/;"	kind:class	line:200
+INDEXES_IN_TABLE	../main_window.py	/^INDEXES_IN_TABLE = [1, 4, 5, 6, 7, 9, 10, 11, 14, 18, 21, 25, 28, 31]$/;"	kind:variable	line:40
 January	../nba_py/constants.py	/^    January = '4'$/;"	kind:variable	line:560
 July	../nba_py/constants.py	/^    July = '10'$/;"	kind:variable	line:566
 June	../nba_py/constants.py	/^    June = '9'$/;"	kind:variable	line:565
@@ -189,6 +189,7 @@ PTS_FB	../nba_py/constants.py	/^    PTS_FB = 'PTS_FB'$/;"	kind:variable	line:628
 PTS_OFF_TOV	../nba_py/constants.py	/^    PTS_OFF_TOV = 'PTS_OFF_TOV'$/;"	kind:variable	line:629
 PaceAdjust	../nba_py/constants.py	/^class PaceAdjust(_DefaultN):$/;"	kind:class	line:520
 Pacific	../nba_py/constants.py	/^    Pacific = 'Pacific'$/;"	kind:variable	line:466
+PbpTableModel	../main_window.py	/^class PbpTableModel(QAbstractTableModel):$/;"	kind:class	line:312
 Per100Plays	../nba_py/constants.py	/^    Per100Plays = 'Per100Plays'$/;"	kind:variable	line:402
 Per100Possessions	../nba_py/constants.py	/^    Per100Possessions = 'Per100Possessions'$/;"	kind:variable	line:401
 Per36	../nba_py/constants.py	/^    Per36 = 'Per36'$/;"	kind:variable	line:397
@@ -241,10 +242,13 @@ PlusMinus	../nba_py/constants.py	/^class PlusMinus(_DefaultN):$/;"	kind:class	li
 PostAllStar	../nba_py/constants.py	/^    PostAllStar = 'Post All-Star'$/;"	kind:variable	line:444
 PreAllStar	../nba_py/constants.py	/^    PreAllStar = 'Pre All-Star'$/;"	kind:variable	line:443
 PtMeasureType	../nba_py/constants.py	/^class PtMeasureType:$/;"	kind:class	line:423
+QAbstractTableModel	../main_window.py	/^from PyQt4.QtCore import QAbstractTableModel, Qt, QVariant$/;"	kind:namespace	line:19
 QApplication	../main.py	/^from PyQt4.QtGui import QApplication, QMainWindow$/;"	kind:namespace	line:2
 QMainWindow	../main.py	/^from PyQt4.QtGui import QApplication, QMainWindow$/;"	kind:namespace	line:2
-QtCore	../main_window.py	/^from PyQt4 import QtCore, QtGui$/;"	kind:namespace	line:19
-QtGui	../main_window.py	/^from PyQt4 import QtCore, QtGui$/;"	kind:namespace	line:19
+QVariant	../main_window.py	/^from PyQt4.QtCore import QAbstractTableModel, Qt, QVariant$/;"	kind:namespace	line:19
+Qt	../main_window.py	/^from PyQt4.QtCore import QAbstractTableModel, Qt, QVariant$/;"	kind:namespace	line:19
+QtCore	../main_window.py	/^from PyQt4 import QtCore, QtGui$/;"	kind:namespace	line:18
+QtGui	../main_window.py	/^from PyQt4 import QtCore, QtGui$/;"	kind:namespace	line:18
 QuarterFinals	../nba_py/constants.py	/^    QuarterFinals = '1'$/;"	kind:variable	line:549
 REB	../nba_py/constants.py	/^    REB = 'REB'$/;"	kind:variable	line:604
 REB	../nba_py/constants.py	/^    REB = 'REB'$/;"	kind:variable	line:772
@@ -255,7 +259,6 @@ Rookie	../nba_py/constants.py	/^    Rookie = 'Rookie'$/;"	kind:variable	line:693
 RookieYear	../nba_py/constants.py	/^class RookieYear(_DefaultBlank):$/;"	kind:class	line:688
 Rookies	../nba_py/constants.py	/^    Rookies = 'Rookie'$/;"	kind:variable	line:643
 Rookies	../nba_py/constants.py	/^    Rookies = 'Rookies'$/;"	kind:variable	line:636
-SIGNAL	../main_window.py	/^from PyQt4.QtCore import SIGNAL$/;"	kind:namespace	line:20
 STL	../nba_py/constants.py	/^    STL = 'STL'$/;"	kind:variable	line:606
 STL	../nba_py/constants.py	/^    STL = 'STL'$/;"	kind:variable	line:769
 STL_TOV	../nba_py/constants.py	/^    STL_TOV = 'STL\/TOV'$/;"	kind:variable	line:611
@@ -324,10 +327,10 @@ Top25	../nba_py/constants.py	/^    Top25 = 'Top+25+Pick'$/;"	kind:variable	line:
 Top5	../nba_py/constants.py	/^    Top5 = 'Top+5+Pick'$/;"	kind:variable	line:718
 Totals	../nba_py/constants.py	/^    Totals = 'Totals'$/;"	kind:variable	line:392
 Ui_NbaGifMainWindow	../main.py	/^from main_window import Ui_NbaGifMainWindow$/;"	kind:namespace	line:3
-Ui_NbaGifMainWindow	../main_window.py	/^class Ui_NbaGifMainWindow(object):$/;"	kind:class	line:159
+Ui_NbaGifMainWindow	../main_window.py	/^class Ui_NbaGifMainWindow(object):$/;"	kind:class	line:184
 Undrafted	../nba_py/constants.py	/^    Undrafted = 'Undrafted'$/;"	kind:variable	line:725
 Usage	../nba_py/constants.py	/^    Usage = 'Usage'$/;"	kind:variable	line:419
-VIDEO_QUALITIES	../main_window.py	/^VIDEO_QUALITIES = ['416x240_200.mp4', '640x360_600.mp4',$/;"	kind:variable	line:37
+VIDEO_QUALITIES	../main_window.py	/^VIDEO_QUALITIES = ['416x240_200.mp4', '640x360_600.mp4',$/;"	kind:variable	line:36
 VIDEO_QUALITIES	../nba_gif.py	/^VIDEO_QUALITIES = ['416x240_200.mp4', '640x360_600.mp4',$/;"	kind:variable	line:12
 Veteran	../nba_py/constants.py	/^    Veteran = 'Veteran'$/;"	kind:variable	line:695
 VsConference	../nba_py/constants.py	/^class VsConference(_DefaultBlank):$/;"	kind:class	line:455
@@ -344,6 +347,7 @@ _DefaultZero	../nba_py/constants.py	/^class _DefaultZero:$/;"	kind:class	line:38
 _PlayerDashboard	../nba_py/player.py	/^class _PlayerDashboard:$/;"	kind:class	line:101
 _PlayerTrackingStats	../nba_py/league.py	/^class _PlayerTrackingStats:$/;"	kind:class	line:260
 _TeamDashboard	../nba_py/team.py	/^class _TeamDashboard:$/;"	kind:class	line:87
+__init__	../main_window.py	/^    def __init__(self, game, parent=None):$/;"	kind:member	line:313
 __init__	../nba_py/__init__.py	/^    def __init__(self,$/;"	kind:member	line:116
 __init__	../nba_py/draftcombine.py	/^    def __init__($/;"	kind:member	line:23
 __init__	../nba_py/draftcombine.py	/^    def __init__($/;"	kind:member	line:38
@@ -386,7 +390,7 @@ _api_scrape	../nba_py/player.py	/^from nba_py import _api_scrape, _get_json, HAS
 _api_scrape	../nba_py/shotchart.py	/^from nba_py import _api_scrape, _get_json$/;"	kind:namespace	line:1
 _api_scrape	../nba_py/team.py	/^from nba_py import _api_scrape, _get_json$/;"	kind:namespace	line:1
 _curr_year	../nba_py/constants.py	/^_curr_year = datetime.now().year$/;"	kind:variable	line:3
-_encoding	../main_window.py	/^    _encoding = QtGui.QApplication.UnicodeUTF8$/;"	kind:variable	line:29
+_encoding	../main_window.py	/^    _encoding = QtGui.QApplication.UnicodeUTF8$/;"	kind:variable	line:28
 _endpoint	../nba_py/__init__.py	/^    _endpoint = 'scoreboard'$/;"	kind:variable	line:114
 _endpoint	../nba_py/draftcombine.py	/^    _endpoint = 'draftcombinedrillresults'$/;"	kind:variable	line:21
 _endpoint	../nba_py/draftcombine.py	/^    _endpoint = 'draftcombinespotshooting'$/;"	kind:variable	line:36
@@ -454,8 +458,8 @@ _endpoint	../nba_py/team.py	/^    _endpoint = 'teamplayeronoffdetails'$/;"	kind:
 _endpoint	../nba_py/team.py	/^    _endpoint = 'teamplayeronoffsummary'$/;"	kind:variable	line:394
 _endpoint	../nba_py/team.py	/^    _endpoint = 'teamvsplayer'$/;"	kind:variable	line:483
 _endpoint	../nba_py/team.py	/^    _endpoint = 'teamyearbyyearstats'$/;"	kind:variable	line:420
-_fromUtf8	../main_window.py	/^    _fromUtf8 = QtCore.QString.fromUtf8$/;"	kind:variable	line:23
-_fromUtf8	../main_window.py	/^    def _fromUtf8(s):$/;"	kind:function	line:25
+_fromUtf8	../main_window.py	/^    _fromUtf8 = QtCore.QString.fromUtf8$/;"	kind:variable	line:22
+_fromUtf8	../main_window.py	/^    def _fromUtf8(s):$/;"	kind:function	line:24
 _get_json	../nba_py/__init__.py	/^def _get_json(endpoint, params, referer='scores'):$/;"	kind:function	line:73
 _get_json	../nba_py/draftcombine.py	/^from nba_py import _api_scrape, _get_json$/;"	kind:namespace	line:1
 _get_json	../nba_py/game.py	/^from nba_py import _api_scrape, _get_json$/;"	kind:namespace	line:1
@@ -465,8 +469,8 @@ _get_json	../nba_py/shotchart.py	/^from nba_py import _api_scrape, _get_json$/;"
 _get_json	../nba_py/team.py	/^from nba_py import _api_scrape, _get_json$/;"	kind:namespace	line:1
 _pt_measure_type	../nba_py/league.py	/^    _pt_measure_type = ''$/;"	kind:variable	line:297
 _pt_measure_type	../nba_py/league.py	/^    _pt_measure_type = constants.PtMeasureType.SpeedDistance$/;"	kind:variable	line:374
-_translate	../main_window.py	/^    def _translate(context, text, disambig):$/;"	kind:function	line:31
-_translate	../main_window.py	/^    def _translate(context, text, disambig):$/;"	kind:function	line:34
+_translate	../main_window.py	/^    def _translate(context, text, disambig):$/;"	kind:function	line:30
+_translate	../main_window.py	/^    def _translate(context, text, disambig):$/;"	kind:function	line:33
 all_star_season_totals	../nba_py/player.py	/^    def all_star_season_totals(self):$/;"	kind:member	line:668
 alltime_season_high	../nba_py/league.py	/^    def alltime_season_high(self):$/;"	kind:member	line:50
 app	../main.py	/^app = QApplication(sys.argv)$/;"	kind:variable	line:5
@@ -508,6 +512,7 @@ closest_defender_shooting_long	../nba_py/team.py	/^    def closest_defender_shoo
 coaches	../nba_py/team.py	/^    def coaches(self):$/;"	kind:member	line:83
 college_season_career_totals	../nba_py/player.py	/^    def college_season_career_totals(self):$/;"	kind:member	line:677
 college_season_totals	../nba_py/player.py	/^    def college_season_totals(self):$/;"	kind:member	line:674
+columnCount	../main_window.py	/^    def columnCount(self, parent):$/;"	kind:member	line:324
 constants	../main_window.py	/^from nba_py import team, game, constants, player$/;"	kind:namespace	line:9
 constants	../nba_gif.py	/^from nba_py import team, game, constants, player$/;"	kind:namespace	line:2
 constants	../nba_py/draftcombine.py	/^from nba_py import constants$/;"	kind:namespace	line:2
@@ -519,13 +524,17 @@ constants	../nba_py/team.py	/^from nba_py import constants$/;"	kind:namespace	li
 constants.py	../nba_py/constants.py	1;"	kind:file	line:1
 contested_rebounding	../nba_py/team.py	/^    def contested_rebounding(self):$/;"	kind:member	line:462
 current_season_high	../nba_py/league.py	/^    def current_season_high(self):$/;"	kind:member	line:47
+data	../main_window.py	/^    def data(self, index, role):$/;"	kind:member	line:327
 date	../main_window.py	/^from datetime import date, timedelta$/;"	kind:namespace	line:13
 date	../nba_gif.py	/^from datetime import date, timedelta$/;"	kind:namespace	line:6
 datetime	../nba_py/__init__.py	/^from datetime import datetime, timedelta$/;"	kind:namespace	line:1
 datetime	../nba_py/constants.py	/^from datetime import datetime$/;"	kind:namespace	line:1
 days_rest	../nba_py/player.py	/^    def days_rest(self):$/;"	kind:member	line:244
 days_rest	../nba_py/team.py	/^    def days_rest(self):$/;"	kind:member	line:158
+download	../main_window.py	/^    def download(self, page):$/;"	kind:member	line:301
 draftcombine.py	../nba_py/draftcombine.py	1;"	kind:file	line:1
+drawGame	../main_window.py	/^    def drawGame(self, game_code):$/;"	kind:member	line:290
+drawScoreboard	../main_window.py	/^    def drawScoreboard(self, year=2017, month=10, day=29):$/;"	kind:member	line:281
 dribble_shooting	../nba_py/player.py	/^    def dribble_shooting(self):$/;"	kind:member	line:790
 dribble_shooting	../nba_py/team.py	/^    def dribble_shooting(self):$/;"	kind:member	line:443
 east_conf_standings_by_day	../nba_py/__init__.py	/^    def east_conf_standings_by_day(self):$/;"	kind:member	line:144
@@ -533,6 +542,7 @@ expire_after	../nba_py/__init__.py	/^        expire_after=timedelta(minutes=CACH
 game	../main_window.py	/^from nba_py import team, game, constants, player$/;"	kind:namespace	line:9
 game	../nba_gif.py	/^from nba_py import team, game, constants, player$/;"	kind:namespace	line:2
 game.py	../nba_py/game.py	1;"	kind:file	line:1
+game_codes	../nba_gif.py	/^        game_codes = [d[5] for d in scoreboard['resultSets'][0]['rowSet']]$/;"	kind:variable	line:168
 game_header	../nba_py/__init__.py	/^    def game_header(self):$/;"	kind:member	line:132
 game_info	../nba_py/game.py	/^    def game_info(self):$/;"	kind:member	line:42
 game_summary	../nba_py/game.py	/^    def game_summary(self):$/;"	kind:member	line:30
@@ -543,13 +553,16 @@ get	../main_window.py	/^from requests import get$/;"	kind:namespace	line:12
 get	../nba_gif.py	/^from requests import get$/;"	kind:namespace	line:5
 get	../nba_py/__init__.py	/^from requests import get$/;"	kind:namespace	line:4
 get	../nba_py/constants.py	/^    def get(self, n):$/;"	kind:member	line:493
-get_games	../main_window.py	/^def get_games(year=2017, month=10, day=29):$/;"	kind:function	line:84
-get_games	../nba_gif.py	/^def get_games(year=2017, month=10, day=29):$/;"	kind:function	line:59
+get_game	../main_window.py	/^def get_game(game_id='0021700092', game_code='20171030\/SASBOS'):$/;"	kind:function	line:113
+get_game	../nba_gif.py	/^def get_game(game_id='0021700092', game_code='20171030\/SASBOS'):$/;"	kind:function	line:90
+get_games	../main_window.py	/^def get_games(year=2017, month=10, day=29):$/;"	kind:function	line:85
+get_games	../nba_gif.py	/^def get_games(year=2017, month=10, day=29):$/;"	kind:function	line:62
 get_player	../nba_py/player.py	/^def get_player(first_name,$/;"	kind:function	line:9
 get_scoreboard	../main_window.py	/^def get_scoreboard(year=2017, month=10, day=29):$/;"	kind:function	line:67
-get_scoreboard	../nba_gif.py	/^def get_scoreboard(year=2017, month=10, day=29):$/;"	kind:function	line:42
-get_videos	../main_window.py	/^def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIES[0]):$/;"	kind:function	line:112
-get_videos	../nba_gif.py	/^def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIES[0]):$/;"	kind:function	line:87
+get_scoreboard	../nba_gif.py	/^def get_scoreboard(year=2017, month=10, day=29):$/;"	kind:function	line:43
+get_videos	../main_window.py	/^def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIES[0], dialog=None):$/;"	kind:function	line:131
+get_videos	../nba_gif.py	/^def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIES[2], dialog=None):$/;"	kind:function	line:108
+headerData	../main_window.py	/^    def headerData(self, col, orientation, role):$/;"	kind:member	line:337
 headline_stats	../nba_py/player.py	/^    def headline_stats(self):$/;"	kind:member	line:97
 history	../nba_py/team.py	/^    def history(self):$/;"	kind:member	line:48
 hof	../nba_py/team.py	/^    def hof(self):$/;"	kind:member	line:63
@@ -557,6 +570,10 @@ hustle_stats_available	../nba_py/game.py	/^    def hustle_stats_available(self):
 hustle_stats_player_box_score	../nba_py/game.py	/^    def hustle_stats_player_box_score(self):$/;"	kind:member	line:210
 hustle_stats_team_box_score	../nba_py/game.py	/^    def hustle_stats_team_box_score(self):$/;"	kind:member	line:213
 inactive_players	../nba_py/game.py	/^    def inactive_players(self):$/;"	kind:member	line:39
+index	../nba_gif.py	/^            index = int(raw_input($/;"	kind:variable	line:174
+index	../nba_gif.py	/^            index = int(raw_input($/;"	kind:variable	line:182
+index	../nba_gif.py	/^        index = int($/;"	kind:variable	line:171
+index	../nba_gif.py	/^        index = int(raw_input('Select one of the quality:'))$/;"	kind:variable	line:180
 info	../nba_py/game.py	/^    def info(self):$/;"	kind:member	line:152
 info	../nba_py/game.py	/^    def info(self):$/;"	kind:member	line:171
 info	../nba_py/game.py	/^    def info(self):$/;"	kind:member	line:193
@@ -567,7 +584,7 @@ info	../nba_py/team.py	/^    def info(self):$/;"	kind:member	line:13
 info	../nba_py/team.py	/^    def info(self):$/;"	kind:member	line:31
 info	../nba_py/team.py	/^    def info(self):$/;"	kind:member	line:415
 info	../nba_py/team.py	/^    def info(self):$/;"	kind:member	line:433
-initContent	../main_window.py	/^    def initContent(self):$/;"	kind:member	line:231
+initContent	../main_window.py	/^    def initContent(self):$/;"	kind:member	line:260
 install_cache	../nba_py/__init__.py	/^    from requests_cache import install_cache$/;"	kind:namespace	line:16
 json	../main_window.py	/^import json$/;"	kind:namespace	line:10
 json	../nba_gif.py	/^import json$/;"	kind:namespace	line:3
@@ -606,7 +623,7 @@ line_score	../nba_py/__init__.py	/^    def line_score(self):$/;"	kind:member	lin
 line_score	../nba_py/game.py	/^    def line_score(self):$/;"	kind:member	line:45
 lineups	../nba_py/team.py	/^    def lineups(self):$/;"	kind:member	line:372
 load_json	../main_window.py	/^def load_json(file_name):$/;"	kind:function	line:53
-load_json	../nba_gif.py	/^def load_json(file_name):$/;"	kind:function	line:28
+load_json	../nba_gif.py	/^def load_json(file_name):$/;"	kind:function	line:29
 location	../nba_py/player.py	/^    def location(self):$/;"	kind:member	line:229
 location	../nba_py/team.py	/^    def location(self):$/;"	kind:member	line:146
 low_season_high	../nba_py/league.py	/^    def low_season_high(self):$/;"	kind:member	line:56
@@ -622,7 +639,9 @@ num_contested_rebounding	../nba_py/player.py	/^    def num_contested_rebounding(
 off_court	../nba_py/team.py	/^    def off_court(self):$/;"	kind:member	line:389
 off_court	../nba_py/team.py	/^    def off_court(self):$/;"	kind:member	line:399
 officials	../nba_py/game.py	/^    def officials(self):$/;"	kind:member	line:36
-onDateChanged	../main_window.py	/^    def onDateChanged(self, date):$/;"	kind:member	line:238
+onDateChanged	../main_window.py	/^    def onDateChanged(self, new_date):$/;"	kind:member	line:277
+onGameChanged	../main_window.py	/^    def onGameChanged(self, index):$/;"	kind:member	line:274
+onQualityChanged	../main_window.py	/^    def onQualityChanged(self, index):$/;"	kind:member	line:271
 on_court	../nba_py/team.py	/^    def on_court(self):$/;"	kind:member	line:386
 on_court	../nba_py/team.py	/^    def on_court(self):$/;"	kind:member	line:396
 on_off_court	../nba_py/player.py	/^    def on_off_court(self):$/;"	kind:member	line:1094
@@ -664,6 +683,7 @@ pre_post_all_star	../nba_py/player.py	/^    def pre_post_all_star(self):$/;"	kin
 pre_post_all_star	../nba_py/team.py	/^    def pre_post_all_star(self):$/;"	kind:member	line:155
 preseason_career_totals	../nba_py/player.py	/^    def preseason_career_totals(self):$/;"	kind:member	line:683
 preseason_season_totals	../nba_py/player.py	/^    def preseason_season_totals(self):$/;"	kind:member	line:680
+raw_date	../nba_gif.py	/^    raw_date = raw_input('Enter the date of games (such as 2017\/10\/29):')$/;"	kind:variable	line:163
 rebound_distance_rebounding	../nba_py/player.py	/^    def rebound_distance_rebounding(self):$/;"	kind:member	line:848
 rebound_distance_rebounding	../nba_py/team.py	/^    def rebound_distance_rebounding(self):$/;"	kind:member	line:468
 regular_season_career_totals	../nba_py/player.py	/^    def regular_season_career_totals(self):$/;"	kind:member	line:659
@@ -671,16 +691,19 @@ regular_season_rankings	../nba_py/player.py	/^    def regular_season_rankings(se
 regular_season_totals	../nba_py/player.py	/^    def regular_season_totals(self):$/;"	kind:member	line:656
 results	../nba_py/league.py	/^    def results(self):$/;"	kind:member	line:23
 retired	../nba_py/team.py	/^    def retired(self):$/;"	kind:member	line:66
-retranslateUi	../main_window.py	/^    def retranslateUi(self, NbaGifMainWindow):$/;"	kind:member	line:225
+retranslateUi	../main_window.py	/^    def retranslateUi(self, NbaGifMainWindow):$/;"	kind:member	line:254
 roster	../nba_py/team.py	/^    def roster(self):$/;"	kind:member	line:80
+rowCount	../main_window.py	/^    def rowCount(self, parent):$/;"	kind:member	line:321
 score_differential	../nba_py/player.py	/^    def score_differential(self):$/;"	kind:member	line:581
 score_differential	../nba_py/team.py	/^    def score_differential(self):$/;"	kind:member	line:302
+scoreboard	../nba_gif.py	/^    scoreboard = get_scoreboard(year=year, month=month, day=day)$/;"	kind:variable	line:165
 season_highs	../nba_py/player.py	/^    def season_highs(self):$/;"	kind:member	line:708
 season_ranks	../nba_py/team.py	/^    def season_ranks(self):$/;"	kind:member	line:34
 season_series	../nba_py/game.py	/^    def season_series(self):$/;"	kind:member	line:51
 season_totals	../nba_py/team.py	/^    def season_totals(self):$/;"	kind:member	line:379
 series_standings	../nba_py/__init__.py	/^    def series_standings(self):$/;"	kind:member	line:138
-setupUi	../main_window.py	/^    def setupUi(self, NbaGifMainWindow):$/;"	kind:member	line:160
+setData	../main_window.py	/^    def setData(self, index, value, role):$/;"	kind:member	line:334
+setupUi	../main_window.py	/^    def setupUi(self, NbaGifMainWindow):$/;"	kind:member	line:185
 shot_5ft	../nba_py/player.py	/^    def shot_5ft(self):$/;"	kind:member	line:523
 shot_5ft	../nba_py/team.py	/^    def shot_5ft(self):$/;"	kind:member	line:280
 shot_8ft	../nba_py/player.py	/^    def shot_8ft(self):$/;"	kind:member	line:526
@@ -711,6 +734,7 @@ shot_types_detail	../nba_py/player.py	/^    def shot_types_detail(self):$/;"	kin
 shot_types_summary	../nba_py/player.py	/^    def shot_types_summary(self):$/;"	kind:member	line:535
 shotchart.py	../nba_py/shotchart.py	1;"	kind:file	line:1
 social_sites	../nba_py/team.py	/^    def social_sites(self):$/;"	kind:member	line:51
+sort	../main_window.py	/^    def sort(self, Ncol, order):$/;"	kind:member	line:342
 sql_players_advanced	../nba_py/game.py	/^    def sql_players_advanced(self):$/;"	kind:member	line:128
 sql_players_four_factors	../nba_py/game.py	/^    def sql_players_four_factors(self):$/;"	kind:member	line:138
 sql_players_misc	../nba_py/game.py	/^    def sql_players_misc(self):$/;"	kind:member	line:118
@@ -738,6 +762,8 @@ timedelta	../nba_py/__init__.py	/^from datetime import datetime, timedelta$/;"	k
 touch_time_shooting	../nba_py/player.py	/^    def touch_time_shooting(self):$/;"	kind:member	line:799
 touch_time_shooting	../nba_py/team.py	/^    def touch_time_shooting(self):$/;"	kind:member	line:452
 ui	../main.py	/^ui = Ui_NbaGifMainWindow()$/;"	kind:variable	line:7
+video_quality	../nba_gif.py	/^                   video_quality=video_quality)$/;"	kind:variable	line:188
+video_quality	../nba_gif.py	/^        video_quality = VIDEO_QUALITIES[index - 1]$/;"	kind:variable	line:184
 vs_player_info	../nba_py/player.py	/^    def vs_player_info(self):$/;"	kind:member	line:1118
 vs_player_overall	../nba_py/team.py	/^    def vs_player_overall(self):$/;"	kind:member	line:539
 west_conf_standings_by_day	../nba_py/__init__.py	/^    def west_conf_standings_by_day(self):$/;"	kind:member	line:147
@@ -745,6 +771,6 @@ win_losses	../nba_py/player.py	/^    def win_losses(self):$/;"	kind:member	line:
 window	../main.py	/^window = QMainWindow()$/;"	kind:variable	line:6
 wins_losses	../nba_py/team.py	/^    def wins_losses(self):$/;"	kind:member	line:149
 write_json	../main_window.py	/^def write_json(file_name, json_data):$/;"	kind:function	line:59
-write_json	../nba_gif.py	/^def write_json(file_name, json_data):$/;"	kind:function	line:34
+write_json	../nba_gif.py	/^def write_json(file_name, json_data):$/;"	kind:function	line:36
 xmltodict	../main_window.py	/^import xmltodict$/;"	kind:namespace	line:15
 xmltodict	../nba_gif.py	/^import xmltodict$/;"	kind:namespace	line:8
