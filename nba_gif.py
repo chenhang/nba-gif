@@ -105,7 +105,7 @@ def get_game(game_id='0021700092', game_code='20171030/SASBOS'):
             print e
 
 
-def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIES[0], dialog=None):
+def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIES[2], dialog=None):
     year = str(game_date)[0:4]
     data_path = os.path.join(
         'games', '-'.join([game_date, game]) + '.json')
@@ -142,15 +142,16 @@ def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIE
                 url='http://www.nba.com/video/wsc/league/' + uuid + '.xml').content)
             video_url = next(v['#text'] for v in video_xml['video']
                              ['files']['file'] if video_quality in v['#text'])
-            clip = VideoFileClip(video_url, audio=False,).resize(0.7)
+            clip = VideoFileClip(video_url, audio=False,)
 
-            # Not saving video this time
-            # clip.write_videofile(os.path.join(video_path, '.'.join(
-            #     [str(event['EVENTNUM']), name, 'mp4'])))
+            clip.write_videofile(os.path.join(video_path, '_'.join(
+                [str(event['EVENTNUM']), name, video_quality])))
+
+            print video_url
             print '.'.join(
                 [str(event['EVENTNUM']), name])
-            clip.write_gif(os.path.join(gif_path, '.'.join(
-                [str(event['EVENTNUM']), name, 'gif'])), program='ffmpeg')
+            # clip.resize(0.7).write_gif(os.path.join(gif_path, '.'.join(
+            #     [str(event['EVENTNUM']), name, 'gif'])), program='ffmpeg', fps=10)
             progress = str(current) + '/' + str(total)
             print
             print str(current) + '/' + str(total)
