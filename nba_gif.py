@@ -166,30 +166,29 @@ def get_videos(game_date='20171029', game='SASIND', video_quality=VIDEO_QUALITIE
 
 
 if __name__ == '__main__':
-    get_videos()
-    # raw_date = raw_input('Enter the date of games (such as 2017/10/29):')
-    # year, month, day = [int(e) for e in raw_date.split('/')]
-    # scoreboard = get_scoreboard(year=year, month=month, day=day)
-    # get_games(year=year, month=month, day=day)
-    # if len(scoreboard['resultSets'][0]['rowSet']) > 0:
-    #     game_codes = [d[5] for d in scoreboard['resultSets'][0]['rowSet']]
-    #     for i, game_code in enumerate(game_codes):
-    #         print str(i + 1) + '. ' + game_code
-    #     index = int(
-    #         raw_input('Select one of the game(enter the number in the front):'))
-    #     while index > len(game_codes) or index < 1:
-    #         index = int(raw_input(
-    #             'Not a invalid game. Select one of the game(enter the number in the front):'))
-    #     print 'You choosed ' + game_codes[index - 1]
-    #     game_date, game_code = game_codes[index - 1].split('/')
-    #     for i, quality in enumerate(VIDEO_QUALITIES):
-    #         print str(i + 1) + '. ' + quality
-    #     index = int(raw_input('Select one of the quality:'))
-    #     while index > len(VIDEO_QUALITIES) or index < 1:
-    #         index = int(raw_input(
-    #             'Not a invalid quality. Enter again:'))
-    #     video_quality = VIDEO_QUALITIES[index - 1]
-    #     print 'You choosed ' + video_quality
-    #     print 'Start Downloading'
-    #     get_videos(game_date=game_date, game=game_code,
-    #                video_quality=video_quality)
+    raw_date = raw_input('Enter the date of games (such as 2017/10/29):')
+    year, month, day = [int(e) for e in raw_date.split('/')]
+    scoreboard = get_scoreboard(year=year, month=month, day=day)
+    get_games(year=year, month=month, day=day)
+    if len(scoreboard['resultSets'][0]['rowSet']) > 0:
+        game_codes = [d[5] for d in scoreboard['resultSets'][0]['rowSet']]
+        for i, game_code in enumerate(game_codes):
+            print str(i + 1) + '. ' + game_code
+        index = int(
+            raw_input('Select one of the game(enter the number in the front):'))
+        while index > len(game_codes) or index < 1:
+            index = int(raw_input(
+                'Not a invalid game. Select one of the game(enter the number in the front):'))
+        print 'You choosed ' + game_codes[index - 1]
+        game_date, game_code = game_codes[index - 1].split('/')
+        for i, quality in enumerate(VIDEO_QUALITIES):
+            print str(i + 1) + '. ' + quality
+        index = int(raw_input('Select one of the quality:'))
+        while index > len(VIDEO_QUALITIES) or index < 1:
+            index = int(raw_input(
+                'Not a invalid quality. Enter again:'))
+        video_quality = VIDEO_QUALITIES[index - 1]
+        print 'You choosed ' + video_quality
+        print 'Start Downloading'
+        get_videos(game_date=game_date, game=game_code,
+                   video_quality=video_quality)
